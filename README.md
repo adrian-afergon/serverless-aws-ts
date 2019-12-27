@@ -1,6 +1,6 @@
 # AWS-TS-EXAMPLE
 
-[![Actions Status](https://github.com/{owner}/{repo}/workflows/{workflow_name}/badge.svg)](https://github.com/{owner}/{repo}/actions)
+[![Actions Status](https://github.com/adrian-afergon/serverless-aws-ts/workflows/Deploy/badge.svg)](https://github.com/adrian-afergon/serverless-aws-ts/actions)
 
 This repo is a basic example using Serverless with Typescript.
 
