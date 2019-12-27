@@ -5,7 +5,7 @@ jobs:
       - run: npm run test
   deploy_my_api:
     executor: aws-servlerless/default
-      steps:
+    steps:
       - run: serverless deploy
 orbs:
   aws-serverless: circleci/aws-serverless@1.0.2
