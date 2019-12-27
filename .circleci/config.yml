@@ -1,22 +1,25 @@
-version: 2.1
-
-orbs:
-  aws-cli: circleci/aws-cli@0.1.19
-
 jobs:
-  aws-cli-example:
-    executor: aws-cli/default
+  test_my_api:
+    executor: aws-servlerless/default
     steps:
-      - checkout
-      - aws-cli/setup:
-          profile-name: example
-        - run: echo "Run your code here"
+      - run: npm run test
+  deploy_my_api:
+    executor: aws-servlerless/default
+      steps:
+      - run: serverless deploy
+orbs:
+  aws-serverless: circleci/aws-serverless@1.0.2
+version: 2.1
 workflows:
-  version: 2
-  aws-cli:
+  test_and_deploy:
     jobs:
-      - aws-cli-example:
-          context: aws
+      - test_my_api:
+          requires:
+            - deploy-staging
+      - deploy_my_api:
+          name: deploy-production
+          requires:
+            - test_my_api
 
 #      # run tests!
 #      - run:
