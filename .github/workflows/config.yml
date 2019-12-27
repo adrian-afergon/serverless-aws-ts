@@ -11,6 +11,8 @@ jobs:
       - uses: actions/checkout@master
       - name: npm install
         run: npm install
+      - name: tests
+        run: npm run test
       - name: serverless deploy
         uses: serverless/github-action@master
         with:
