@@ -1,6 +1,6 @@
 import { DynamoDB } from 'aws-sdk';
 import {AttributeMap, AttributeValue, GetItemInput} from "aws-sdk/clients/dynamodb";
-import {Video} from "./models/Video";
+import {Video} from "../models/Video";
 
 export class VideosRepository {
 

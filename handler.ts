@@ -1,4 +1,4 @@
-import { VideosRepository } from './videosRepository'
+import { VideosRepository } from './repositories/videosRepository'
 import {Video} from "./models/Video";
 
 export const getVideo = async (event, context, callback) => {
