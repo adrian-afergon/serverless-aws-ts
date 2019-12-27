@@ -13,7 +13,7 @@ version: 2.1
 workflows:
   test_and_deploy:
     jobs:
-      - test_my_api:
+      - test_my_api
       - deploy_my_api:
           name: deploy-production
           requires:
