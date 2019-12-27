@@ -21,7 +21,7 @@ export class VideosRepository {
             const result = await this.client.get(params).promise();
             return result.Item ? mapVideo(result.Item) : undefined;
         } catch (error) {
-            throw new Error(error);
+            throw error;
         }
     }
 }
